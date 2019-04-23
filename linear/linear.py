@@ -16,12 +16,12 @@ reg.fit(x,y)
 reg.coef_
 reg.intercept_
 
-print "Accuracy : ", reg.score(x,y)*100
+print ("Accuracy : "+ str(reg.score(x,y)*100))
 
 hours = int(input('Enter the number of hours : '))
 eq = reg.coef_*hours+reg.intercept_
-print 'y = %f*%f+%f' % (reg.coef_,hours,reg.intercept_)
-print "Risk Score: ", eq[0]
+print ('y = %f*%f+%f' % (reg.coef_,hours,reg.intercept_))
+print ("Risk Score: ", eq[0])
 plt.plot(x,y,'o')
 plt.plot(x,reg.predict(x))
 plt.show()
